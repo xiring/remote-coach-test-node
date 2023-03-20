@@ -1,6 +1,6 @@
 # Clone the project
 
-# cd <project>
+# cd to the cloned project
 
 # npm install
 
