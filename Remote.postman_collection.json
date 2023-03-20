@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "8fc02fe0-bf97-42f8-a567-e5c77ed195bf",
+		"name": "Remote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Tshering\",\r\n    \"lastName\":\"Lama2\",\r\n    \"email\":\"lamatshering234@gmail.com\",\r\n    \"password\":\"Nepal@123\",\r\n    \"phoneNumber\":\"9818007774\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2058/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2058",
+					"path": [
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Tshering\",\r\n    \"lastName\":\"Lama2\",\r\n    \"email\":\"lamatshering234@gmail.com\",\r\n    \"password\":\"Nepal@123\",\r\n    \"phoneNumber\":\"9818007774\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2058/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2058",
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "667"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29b-S/Hq33a+Ai0L2OY3SycypXs2q60\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 10:45:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"user\": {\n            \"id\": \"457e6648-5f28-4d29-8a75-f8ff368f2e0c\",\n            \"isActive\": true,\n            \"firstName\": \"Tshering\",\n            \"lastName\": \"Lama2\",\n            \"email\": \"lamatshering234@gmail.com\",\n            \"phoneNumber\": \"9818007774\"\n        },\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NTdlNjY0OC01ZjI4LTRkMjktOGE3NS1mOGZmMzY4ZjJlMGMiLCJpYXQiOjE2NzkzMDkxNTUsImV4cCI6MTY3OTMxMjc1NX0.rp0FGl1hJuWSBAufFHhYtWA3VdLJWTTk4CDvVCV8cfA\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NTdlNjY0OC01ZjI4LTRkMjktOGE3NS1mOGZmMzY4ZjJlMGMiLCJpYXQiOjE2NzkzMDkxNTUsImV4cCI6MTY3OTM5NTU1NX0.gMGRd1f2LNxCIcN1hy3hFDPJBFm8gaR9QROGRgm85iA\"\n    },\n    \"message\": \"User Registered in Successfully\",\n    \"status\": 200,\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"lamatshering23@gmail.com\",\r\n    \"password\":\"Nepal@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2058/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2058",
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"lamatshering23@gmail.com\",\r\n    \"password\":\"Nepal@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2058/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2058",
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1055"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41f-Q2pLIDgr6gmZ3WMA8jv18HcgByU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 10:45:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"user\": {\n            \"id\": \"fc806a16-3285-461f-be07-6f37177b1b6f\",\n            \"isActive\": true,\n            \"firstName\": \"Tshering\",\n            \"middleName\": null,\n            \"lastName\": \"Lama\",\n            \"email\": \"lamatshering23@gmail.com\",\n            \"phoneNumber\": \"9818007774\"\n        },\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbWF0c2hlcmluZzIzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlRzaGVyaW5nIiwibGFzdE5hbWUiOiJMYW1hIiwibWlkZGxlTmFtZSI6bnVsbCwicGhvbmVOdW1iZXIiOiI5ODE4MDA3Nzc0IiwiaXNQZXJtYW5lbnQiOmZhbHNlLCJzdWIiOiJmYzgwNmExNi0zMjg1LTQ2MWYtYmUwNy02ZjM3MTc3YjFiNmYiLCJpYXQiOjE2NzkzMDkxNDIsImV4cCI6MTY3OTMxMjc0Mn0.QokHT-6XyFzGh2W5yf0pn1LOp5Aa46V0CxPBJaeca00\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbWF0c2hlcmluZzIzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlRzaGVyaW5nIiwibGFzdE5hbWUiOiJMYW1hIiwibWlkZGxlTmFtZSI6bnVsbCwicGhvbmVOdW1iZXIiOiI5ODE4MDA3Nzc0IiwiaXNQZXJtYW5lbnQiOmZhbHNlLCJzdWIiOiJmYzgwNmExNi0zMjg1LTQ2MWYtYmUwNy02ZjM3MTc3YjFiNmYiLCJpYXQiOjE2NzkzMDkxNDIsImV4cCI6MTY3OTM5NTU0Mn0.9jmK83E9GFzLAcOebP8LfA0jFdX8Kl1ZPuIAQNWuLh8\"\n    },\n    \"message\": \"User Logged in Successfully\",\n    \"status\": 200,\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbWF0c2hlcmluZzIzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlRzaGVyaW5nIiwibGFzdE5hbWUiOiJMYW1hIiwibWlkZGxlTmFtZSI6bnVsbCwicGhvbmVOdW1iZXIiOiI5ODE4MDA3Nzc0IiwiaXNQZXJtYW5lbnQiOmZhbHNlLCJzdWIiOiJmYzgwNmExNi0zMjg1LTQ2MWYtYmUwNy02ZjM3MTc3YjFiNmYiLCJpYXQiOjE2NzkzMDkxNDIsImV4cCI6MTY3OTMxMjc0Mn0.QokHT-6XyFzGh2W5yf0pn1LOp5Aa46V0CxPBJaeca00",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2058/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2058",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2058/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2058",
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-w/iGd4pJEZQ46w4BQJHw+4DFqhs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 10:58:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": \"457e6648-5f28-4d29-8a75-f8ff368f2e0c\",\n            \"isActive\": false,\n            \"firstName\": \"Tshering\",\n            \"middleName\": null,\n            \"lastName\": \"Lama2\",\n            \"email\": \"lamatshering234@gmail.com\",\n            \"phoneNumber\": \"9818007774\"\n        }\n    ],\n    \"message\": \"User List Fetched Successfully\",\n    \"status\": 200,\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbWF0c2hlcmluZzIzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlRzaGVyaW5nIiwibGFzdE5hbWUiOiJMYW1hIiwibWlkZGxlTmFtZSI6bnVsbCwicGhvbmVOdW1iZXIiOiI5ODE4MDA3Nzc0IiwiaXNQZXJtYW5lbnQiOmZhbHNlLCJzdWIiOiJmYzgwNmExNi0zMjg1LTQ2MWYtYmUwNy02ZjM3MTc3YjFiNmYiLCJpYXQiOjE2NzkzMDkxNDIsImV4cCI6MTY3OTMxMjc0Mn0.QokHT-6XyFzGh2W5yf0pn1LOp5Aa46V0CxPBJaeca00",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2058/v1/user/delete/457e6648-5f28-4d29-8a75-f8ff368f2e0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2058",
+					"path": [
+						"v1",
+						"user",
+						"delete",
+						"457e6648-5f28-4d29-8a75-f8ff368f2e0c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbWF0c2hlcmluZzIzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlRzaGVyaW5nIiwibGFzdE5hbWUiOiJMYW1hIiwibWlkZGxlTmFtZSI6bnVsbCwicGhvbmVOdW1iZXIiOiI5ODE4MDA3Nzc0IiwiaXNQZXJtYW5lbnQiOmZhbHNlLCJzdWIiOiJmYzgwNmExNi0zMjg1LTQ2MWYtYmUwNy02ZjM3MTc3YjFiNmYiLCJpYXQiOjE2NzkzMTAxNTQsImV4cCI6MTY3OTMxMzc1NH0.eqKaNRFYikXFYw_xeeSlyzNUqR6XEuwbVDqrhBPwFOU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2058/v1/user/change-status/457e6648-5f28-4d29-8a75-f8ff368f2e0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2058",
+					"path": [
+						"v1",
+						"user",
+						"change-status",
+						"457e6648-5f28-4d29-8a75-f8ff368f2e0c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Status",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2058/v1/user/change-status/457e6648-5f28-4d29-8a75-f8ff368f2e0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2058",
+							"path": [
+								"v1",
+								"user",
+								"change-status",
+								"457e6648-5f28-4d29-8a75-f8ff368f2e0c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-Dz20KsLpLKX85BV8J6tdQtqXT+M\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 11:03:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"457e6648-5f28-4d29-8a75-f8ff368f2e0c\",\n        \"isActive\": false,\n        \"firstName\": \"Tshering\",\n        \"middleName\": null,\n        \"lastName\": \"Lama2\",\n        \"email\": \"lamatshering234@gmail.com\",\n        \"phoneNumber\": \"9818007774\"\n    },\n    \"message\": \"User Status Changed Successfully\",\n    \"status\": 200,\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}
