@@ -1,0 +1,31 @@
+import { wrap } from '@mikro-orm/core';
+import { {{pascalCase name}} } from './{{kebabCase name}}.dto';
+import { Singleton } from '@utils/decorators/singleton';
+import HttpException from '@utils/exceptions/http.exception';
+import {{pascalCase name}}Repository from './{{kebabCase name}}.repository';
+import { {{pascalCase name}}Entity } from './{{kebabCase name}}.entity';
+import { Mikro } from 'app';
+import { getContextUser } from '@utils/utility';
+
+@Singleton
+class {{pascalCase name}}Service {
+  private readonly {{camelCase name}}Repository: {{pascalCase name}}Repository;
+  private readonly user: ContextUser;
+
+  constructor() {
+    this.{{camelCase name}}Repository = Mikro.em.getRepository({{pascalCase name}}Entity);
+    this.user = getContextUser();
+  }
+
+  findAll = async () => await this.{{camelCase name}}Repository.findAll();
+
+  findOne = async (id:string) => await this.{{camelCase name}}Repository.findOne({ id });
+
+  create = async ({{camelCase name}}Data: {{pascalCase name}}) => {};
+
+  update = async (id:string, {{camelCase name}}Data: {{pascalCase name}}) => {};
+
+  delete = async (id:string) => {}
+}
+
+export default {{pascalCase name}}Service;

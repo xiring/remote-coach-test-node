@@ -1,0 +1,11 @@
+import { FilterQuery } from "@mikro-orm/core";
+import { Singleton } from 'utils/decorators/singleton';
+import { {{pascalCase name}}Entity } from './{{kebabCase name}}.entity';
+import BaseRepository from "shared/base.repository"
+
+@Singleton
+class {{pascalCase name}}Repository extends BaseRepository<{{pascalCase name}}Entity>{
+
+}
+
+export default {{pascalCase name}}Repository;

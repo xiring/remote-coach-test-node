@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{documentTitle}}</title>
+
+  <style>
+    table {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table td, table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    table tr:hover {
+      background-color: #ddd;
+    }
+
+    table th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div style="text-align: center">
+    <h2>INFODEVELOPERS PVT. LTD.</h2>
+    <h4>Attendance Sheet</h4>
+    <h4>{{dateRange}}</h4>
+  </div>
+
+  <div>
+    <h4>Name: {{name}}</h4>
+    <h4>Department: Frontend</h4>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <table>
+      <tr>
+        <td>Date</td>
+        <td>In Time</td>
+        <td>Out Time</td>
+        <td>Work From</td>
+        <td>Task</td>
+      </tr>
+      {{#each attendance}}
+        <tr>
+          <td>{{this.date}}</td>
+          <td>{{this.checkIn}}</td>
+          <td>{{this.checkOut}}</td>
+          <td>Office</td>
+          <td>{{this.task}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+
+  <div style="text-align: left">
+    <p>Approved By,</p>
+    <h4>Name: Yunish Shakya</h4>
+    <h4> Designation: Senior Engineer</h4>
+    <h4>{{todayDate}}</h4>
+  </div>
+
+</main>
+</body>
+</html>

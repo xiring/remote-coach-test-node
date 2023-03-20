@@ -1,0 +1,16 @@
+import { Application } from 'express';
+import ValidationMiddleware from '../../middlewares/validation.middleware';
+import { {{pascalCase name}} } from './{{kebabCase name}}.dto';
+import {{pascalCase name}}Controller from './{{kebabCase name}}.controller';
+
+const {{camelCase name}}Routes = (app: Application) => {
+const {{camelCase name}}Controller=new {{pascalCase name}}Controller();
+app.route('/{{kebabCase name}}').post(ValidationMiddleware({{pascalCase name}}), {{camelCase name}}Controller.create);
+app.route('/{{kebabCase name}}/:id').put(ValidationMiddleware({{pascalCase name}}), {{camelCase
+  name}}Controller.update);
+app.route('/{{kebabCase name}}/:id').delete({{camelCase name}}Controller.delete);
+app.route('/{{kebabCase name}}s').get({{camelCase name}}Controller.findAll);
+app.route('/{{kebabCase name}}s/:id').get({{camelCase name}}Controller.findOne);
+};
+
+export default {{camelCase name}}Routes;

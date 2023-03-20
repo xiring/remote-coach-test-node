@@ -1,0 +1,50 @@
+import { SuccessRes } from '@utils/response';
+import { {{pascalCase name}} } from './{{kebabCase name}}.dto';
+import {{pascalCase name}}Service from './{{kebabCase name}}.service';
+import { Singleton } from '@utils/decorators/singleton';
+
+@Singleton
+class {{pascalCase name}}Controller {
+	private readonly {{camelCase name}}Service: {{pascalCase name}}Service;
+
+	constructor() {
+		this.{{camelCase name}}Service = new {{pascalCase name}}Service();
+	}
+
+	create = async (req: Request<{{pascalCase name}}>, res: Response) => {
+		return SuccessRes(res, 200, {
+			data: await this.{{camelCase name}}Service.create(req.body),
+			message: `{{pascalCase name}} Created in Successfully`,
+		});
+	};
+
+	update = async (req: Request<{{pascalCase name}}, { id: string }>, res: Response) => {
+		return SuccessRes(res, 200, {
+			data: await this.{{camelCase name}}Service.update(req.params.id, req.body),
+			message: `{{pascalCase name}} Updated in Successfully`,
+		});
+	};
+
+	delete = async (req: Request<null, { id: string }>, res: Response) => {
+		return SuccessRes(res, 200, {
+			data: await this.{{camelCase name}}Service.delete(req.params.id),
+			message: `{{pascalCase name}} Deleted in Successfully`,
+		});
+	};
+
+	findOne = async (req: Request<null, { id: string }>, res: Response) => {
+		return SuccessRes(res, 200, {
+			data: await this.{{camelCase name}}Service.findOne(req.params.id),
+			message: `{{pascalCase name}} Fetched in Successfully`,
+		});
+	};
+
+	findAll = async (req: Request, res: Response) => {
+		return SuccessRes(res, 200, {
+			data: await this.{{camelCase name}}Service.findAll(),
+			message: `{{pascalCase name}} List Fetched in Successfully`,
+		});
+	};
+}
+
+export default {{pascalCase name}}Controller;
